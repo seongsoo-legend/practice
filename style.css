@@ -1,0 +1,195 @@
+/*
+  레이아웃 순서
+  1. 리셋 CSS
+  2. 레이아웃 CSS
+  3. 공공재 CSS
+  3. 모듈 CSS
+ */
+
+/*------------------------------------------- 리셋 CSS 시작 ------------------------------------------*/
+
+
+body, ul, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    font-size: 12px;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*------------------------------------------- 리셋 CSS 끝 --------------------------------------------*/
+
+
+/*------------------------------------------- 레이아웃 CSS 시작 ----------------------------------------*/
+
+.l-wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.l-row {
+    margin: 0 -5px;
+}
+
+.l-col {
+    float: left;
+    width: 20%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+/*------------------------------------------- 레이아웃 CSS 끝 ----------------------------------------*/
+
+
+/*------------------------------------------- 공공재 CSS 끝 -----------------------------------------*/
+.l-row:after,
+.clearfix:after
+.l-wrapper:after
+ {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.l-col-12-12 { width: 100%; }
+.l-col-11-12 { width: 91.66666667%; }
+.l-col-10-12 { width: 83.33333333%; }
+.l-col-9-12  { width: 75%; }
+.l-col-8-12  { width: 66.66666667%; }
+.l-col-7-12  { width: 58.33333333%; }
+.l-col-6-12  { width: 50%; }
+.l-col-5-12  { width: 41.66666667%; }
+.l-col-4-12  { width: 33.33333333%; }
+.l-col-3-12  { width: 25%; }
+.l-col-2-12  { width: 16.66666667%; }
+.l-col-1-12  { width: 8.33333333%; }
+
+
+/*-------------------------------------------- 공공재 CSS 끝 ----------------------------------------*/
+
+/*-------------------------------------------- 모듈 CSS 시작 ----------------------------------------*/
+
+.header {
+    width: auto;
+    padding-top: 60px;
+    background-image: url("images/header-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*.header-bg {*/
+    /*background-image: url("images/header-bg.png");*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+/*}*/
+
+.container {
+    color: orange;
+    border-width: 20px 20px 0 20px;
+    border-style: solid;
+    padding: 30px;
+    background-image: url(images/container-bg.png);
+    background-repeat: no-repeat;
+    background-position: right 20px top 20px;
+    background-size: contain;
+}
+
+/*.container-bg {*/
+    /*background-image: url(images/container-bg.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: right 20px top 20px;*/
+    /*background-size: contain;*/
+/*}*/
+
+.container h1{
+    display: inline-block;
+    border-bottom: 2px solid orange;
+    font-size: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+.container p {
+    line-height: 1.2rem;
+}
+
+.container strong {
+    font-weight: bold;
+}
+
+.container-section {
+    margin-right: 220px;
+}
+
+.contents {
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.contents-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.contents-section {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.contents-button {
+    display: block;
+    font-weight: bold;
+    border-top: 3px solid orange;
+    color: orange;
+    padding: 15px 15px;
+    line-height: 1;
+    background-color: white;
+    background-image: url(images/play.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+    letter-spacing: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        background-image: none;
+    }
+
+    .container-section {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .l-col {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .l-col {
+        width: 100%;
+    }
+}
+
+/*-------------------------------------------- 모듈 CSS 끝 ----------------------------------------*/
